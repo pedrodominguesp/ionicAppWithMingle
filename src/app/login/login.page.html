@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <po-page-login 
+(p-login-submit)=login($event) 
+[p-loading]="loading"
+[p-hide-remember-user]="true"
+[p-custom-field]="customField"
+p-product-name="MINGLE"
+[p-literals]="customLiterals"></po-page-login>
+</ion-content>

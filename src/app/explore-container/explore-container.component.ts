@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { MingleService } from '@totvs/mingle';
 
 @Component({
   selector: 'app-explore-container',
@@ -6,10 +8,27 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./explore-container.component.scss'],
 })
 export class ExploreContainerComponent implements OnInit {
-  @Input() name: string;
+  set_alias: string;
+  sessionInfo: any;
+  constructor(private mingleService: MingleService,  private route: Router) { }
 
-  constructor() { }
+  ngOnInit(): void {
+    this.loadSessionInfo();
+  }
 
-  ngOnInit() {}
+  loadSessionInfo() {
+    this.sessionInfo = this.mingleService.getSessionInfo();
+    this.sessionInfo.environmentUrl = 'https://hom-mingle.totvs.com.br'
+    console.log(this.sessionInfo)
+  }
+
+  logout() {
+
+    this.mingleService.auth.logout().subscribe(() => {
+      console.log("usuario saiu");
+      this.route.navigateByUrl('');
+    })
+
+  }
 
 }
