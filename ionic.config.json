@@ -1,0 +1,7 @@
+{
+  "name": "libmingle",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
