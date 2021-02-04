@@ -13,13 +13,13 @@ export class GatewayContainerComponent implements OnInit {
   ngOnInit(): void {
   }
   isHideLoading = true;
-
+  
   getClients() {
 
     this.isHideLoading = false;
-    const options = { headers: { header_teste: `123456` }, body: { teste: 123 } };
 
-    this.mingleService.gateway.get('clients', options).subscribe(response => {
+    this.mingleService.gateway.get('clients').subscribe(response => {
+      console.log(response)
       this.gatewayData = JSON.stringify(response);
       this.isHideLoading = true;
     }, error => {

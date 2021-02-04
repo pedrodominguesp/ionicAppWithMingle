@@ -26,7 +26,7 @@ export class ExploreContainerComponent implements OnInit {
 
     this.mingleService.auth.logout().subscribe(() => {
       console.log("usuario saiu");
-      this.route.navigateByUrl('');
+      this.route.navigateByUrl('/login');
     })
 
   }

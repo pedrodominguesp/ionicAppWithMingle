@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title  class="ion-text-center">login</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,5 +11,8 @@
 [p-hide-remember-user]="true"
 [p-custom-field]="customField"
 p-product-name="MINGLE"
-[p-literals]="customLiterals"></po-page-login>
+[p-literals]="customLiterals"
+(p-language-change)="translateWelcome($event)"
+p-logo="../../assets/icon/Logos_TOTVS/totvs_h_pos_pb.png"
+></po-page-login>
 </ion-content>
