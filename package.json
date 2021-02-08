@@ -24,7 +24,7 @@
     "@ionic/angular": "^5.5.2",
     "@po-ui/ng-components": "^4.4.0",
     "@po-ui/ng-templates": "^4.4.0",
-    "@totvs/mingle": "file:totvs-mingle-0.0.1.tgz",
+    "@totvs/mingle": "0.0.1-20210208.2",
     "cordova-android": "9.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
